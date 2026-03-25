@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  
+</head>
+<body>
+    <table>
+        <tr>
+            <td> 
+                <button id="1" height="60" width="60" onclick="buttonClicked(1)">&nbsp;&nbsp;</button>
+            </td>
+              <td> 
+                <button id="2" height="60" width="60" onclick="buttonClicked(2)">&nbsp;&nbsp;</button>
+            </td>
+              <td> 
+                <button id="3" height="60" width="60" onclick="buttonClicked(3)">&nbsp;&nbsp;</button>
+        </tr>
+        <tr>
+            <td> 
+                <button id="4" height="60" width="60" onclick="buttonClicked(4)">&nbsp;&nbsp;</button>
+            </td>
+              <td> 
+                <button id="5" height="60" width="60" onclick="buttonClicked(5)">&nbsp;&nbsp;</button>
+            </td>
+              <td> 
+                <button id="6" height="60" width="60" onclick="buttonClicked(6)">&nbsp;&nbsp;</button>
+            </td>
+        </tr>
+        <tr>
+            <td> 
+                <button id="7" height="60" width="60" onclick="buttonClicked(7)">&nbsp;&nbsp;</button>
+            </td>
+              <td> 
+                <button id="8" height="60" width="60" onclick="buttonClicked(8)">&nbsp;&nbsp;</button>
+            </td>
+              <td> 
+                <button id="9" height="60" width="60" onclick="buttonClicked(9)">&nbsp;&nbsp;</button>
+        </tr>
+    </table>
+    <script>
+        var turncounter = 1
+        function buttonClicked(id){
+            if(turncounter % 2 == 1){
+                document.getElementById(id).innerHTML= "X";
+            } else {
+                document.getElementById(id).innerHTML = "O";
+            }
+            document.getElementById(id).disabled = true;
+            checkWin();
+            turncounter++;
+        }
+        function checkWin(){
+            // Check rows, columns, and diagonals for a win
+            if(document.getElementById('1').innerText=="X" &&
+             document.getElementById('2').innerText=="X" && 
+             document.getElementById('3').innerText=="X"){
+                alert("Player X wins!");
+            }
+             else  if(document.getElementById('4').innerText=="X" &&
+             document.getElementById('5').innerText=="X" && 
+             document.getElementById('6').innerText=="X"){
+                alert("Player X wins!");
+            }
+             else  if(document.getElementById('7').innerText=="X" &&
+             document.getElementById('8').innerText=="X" && 
+             document.getElementById('9').innerText=="X"){
+                alert("Player X wins!");
+            }
+             else  if(document.getElementById('1').innerText=="X" &&
+             document.getElementById('4').innerText=="X" && 
+             document.getElementById('7').innerText=="X"){
+                alert("Player X wins!");
+            }
+             else  if(document.getElementById('2').innerText=="X" &&
+             document.getElementById('5').innerText=="X" && 
+             document.getElementById('8').innerText=="X"){
+                alert("Player X wins!");
+            }
+              else if(document.getElementById('3').innerText=="X" &&
+             document.getElementById('6').innerText=="X" && 
+             document.getElementById('9').innerText=="X"){
+                alert("Player X wins!");
+            }
+             else  if(document.getElementById('1').innerText=="X" &&
+             document.getElementById('5').innerText=="X" && 
+             document.getElementById('9').innerText=="X"){
+                alert("Player X wins!");
+            }
+             else  if(document.getElementById('3').innerText=="X" &&
+             document.getElementById('5').innerText=="X" && 
+             document.getElementById('7').innerText=="X"){
+                alert("Player X wins!");
+            }
+                else  if(document.getElementById('1').innerText=="O" &&
+                document.getElementById('2').innerText=="O" && 
+                document.getElementById('3').innerText=="O"){
+                    alert("Player O wins!");
+                }
+                else  if(document.getElementById('4').innerText=="O" &&
+                document.getElementById('5').innerText=="O" && 
+                document.getElementById('6').innerText=="O"){
+                    alert("Player O wins!");
+                }
+                else  if(document.getElementById('7').innerText=="O" &&
+                document.getElementById('8').innerText=="O" && 
+                document.getElementById('9').innerText=="O"){
+                    alert("Player O wins!");
+                }
+                else  if(document.getElementById('1').innerText=="O" &&
+                document.getElementById('4').innerText=="O" && 
+                document.getElementById('7').innerText=="O"){
+                    alert("Player O wins!");
+                }
+                else  if(document.getElementById('2').innerText=="O" &&
+                document.getElementById('5').innerText=="O" && 
+                document.getElementById('8').innerText=="O"){
+                    alert("Player O wins!");
+                }
+                else if(document.getElementById('3').innerText=="O" &&
+                document.getElementById('6').innerText=="O" && 
+                document.getElementById('9').innerText=="O"){
+                    alert("Player O wins!");
+                }
+                else  if(document.getElementById('1').innerText=="O" &&
+                document.getElementById('5').innerText=="O" && 
+                document.getElementById('9').innerText=="O"){
+                    alert("Player O wins!");
+                }
+                else  if(document.getElementById('3').innerText=="O" &&
+                document.getElementById('5').innerText=="O" && 
+                document.getElementById('7').innerText=="O"){
+                    alert("Player O wins!");
+                }
+        }
+    </script>
+    
+</body>
+</html>
