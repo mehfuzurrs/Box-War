@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>
+                <button id = '1' height = "60" width = "60" onclick="buttonClicked(1)">&nbsp;&nbsp;</button>
+            </td>
+            <td>
+                <button id = '2' height = "60" width = "60" onclick="buttonClicked(2)">&nbsp;&nbsp;</button>
+            </td>
+            <td>
+                <button id = '3' height = "60" width = "60" onclick="buttonClicked(3)">&nbsp;&nbsp;</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button id = '4' height = "60" width = "60" onclick="buttonClicked(4)">&nbsp;&nbsp;</button>
+            </td>
+            <td>
+                <button id = '5' height = "60" width = "60" onclick="buttonClicked(5)">&nbsp;&nbsp;</button>
+            </td>
+            <td>
+                <button id = '6' height = "60" width = "60" onclick="buttonClicked(6)">&nbsp;&nbsp;</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button id = '7' height = "60" width = "60" onclick="buttonClicked(7)">&nbsp;&nbsp;</button>
+            </td>
+            <td>
+                <button id = '8' height = "60" width = "60" onclick="buttonClicked(8)">&nbsp;&nbsp;</button>
+            </td>
+            <td>
+                <button id = '9' height = "60" width = "60" onclick="buttonClicked(9)">&nbsp;&nbsp;</button>
+            </td>
+        </tr>
+    </table>
+
+    <script>
+        var turncounter = 1
+        function buttonClicked(id){
+            if(turncounter % 2 == 0){
+                document.getElementById(id).innerHTML = "o"
+            }
+            else{
+            document.getElementById(id).innerHTML = "x"
+            }
+            turncounter++
+        }
+    </script>
+</body>
+</html>
